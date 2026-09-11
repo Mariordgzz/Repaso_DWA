@@ -18,6 +18,7 @@ body {
     background-color: var(--light-text);
 }
 
+
 #hero {
     background-color: rgb(60, 255, 0);
     height: 100vh;
@@ -27,7 +28,7 @@ body {
 }
 
 .hero-content {
-    
+
 }
 
 
@@ -49,12 +50,11 @@ nav {
 
 .logo {
     color: var(--light-text);
-    font-size: 1.5rem;
     font-weight: bold;
 }
 
 .nav-links > li {
-    margin-left: 2rem;
+    margin: 1.5rem 0;
 }
 
 .nav-links > li > a {
@@ -72,3 +72,40 @@ nav {
     cursor: pointer;
     display: none;
 }
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 768px) {
+
+    #hero {
+        background-color: rgb(127, 135, 180);
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 1.5rem;
+        color: var(--light-text);
+    }
+
+    .nav-links {
+        top: 70px;
+        position: fixed;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: var(--pr-color);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        left: -100%;
+        }
+
+    .nav-links > li {
+        margin: 1.5rem 0;
+    }
+    
+     /* Este selector esta esperando a que lo active con JS activandolo en el ul */
+    .nav-links.active {
+        left: 0;
+    }
+}
+
