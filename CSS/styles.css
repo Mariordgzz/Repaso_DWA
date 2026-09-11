@@ -1,6 +1,8 @@
 :root {
-    --pr-color: #dd4f4f; 
+    --pr-color: #241d1dec; 
     --light-text: aliceblue;
+    --hover-text: #ff5e00;
+    --transition-value: all 0.3s ease;
 }
 
 * {
@@ -8,7 +10,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: x-large;
+    font-size: 24px;
+    /* Este font-size equivale a 1 rem */
 }
 
 body {
@@ -17,7 +20,6 @@ body {
 
 #hero {
     background-color: rgb(60, 255, 0);
-    width: 50%;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -25,5 +27,48 @@ body {
 }
 
 .hero-content {
+    
+}
 
+
+nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    background-color: var(--pr-color);
+    padding: 1rem 2rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.logo {
+    color: var(--light-text);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links > li {
+    margin-left: 2rem;
+}
+
+.nav-links > li > a {
+    color: var(--light-text);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: var(--transition-value);
+}
+
+.nav-links > li > a:hover {
+    color: var(--hover-text);
+}
+
+.hamburger {
+    cursor: pointer;
+    display: none;
 }
